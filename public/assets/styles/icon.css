@@ -1,0 +1,64 @@
+.icon {
+    cursor: pointer;
+}
+
+.icon::before, .icon::after {
+    content: "";
+    display: inline-block;
+    mask-size: 100%;
+    -webkit-mask-size: 100%;
+    background-color: #ededed;
+}
+
+.icon:hover::before {
+    background-color: #fff;
+}
+
+.profile .icon-settings::before {
+    mask:url("/assets/icons/gear.svg") no-repeat;
+    -webkit-mask:url("/assets/icons/gear.svg") no-repeat;
+}
+
+.connexion.icon::before {
+    mask: url("/assets/icons/server.svg") no-repeat;
+    -webkit-mask: url("/assets/icons/server.svg") no-repeat;
+}
+.dropdown .title.icon::before {
+    mask: url("/assets/icons/caret-right.svg") no-repeat;
+    -webkit-mask: url("/assets/icons/caret-right.svg") no-repeat;
+}
+
+.icon-plus::before {
+    mask:url("/assets/icons/plus.svg") no-repeat;
+    -webkit-mask:url("/assets/icons/plus.svg") no-repeat;
+}
+
+.icon-magnifying-glass::before {
+    mask:url("/assets/icons/magnifying-glass.svg") no-repeat;
+    -webkit-mask:url("/assets/icons/magnifying-glass.svg") no-repeat;
+}
+
+.main-container header .icon-info::before {
+    mask:url("/assets/icons/info.svg") no-repeat;
+    -webkit-mask:url("/assets/icons/info.svg") no-repeat;
+}
+
+.main-container header .icon-users::before {
+    mask:url("/assets/icons/users.svg") no-repeat;
+    -webkit-mask:url("/assets/icons/users.svg") no-repeat;
+}
+
+.main-container header .icon-channel-settings::before {
+    mask:url("/assets/icons/gear.svg") no-repeat;
+    -webkit-mask:url("/assets/icons/gear.svg") no-repeat;
+}
+
+#channelsList .channelItem .icon-xmark::after {
+    mask:url("/assets/icons/xmark.svg") no-repeat;
+    -webkit-mask:url("/assets/icons/xmark.svg") no-repeat;
+}
+
+#user::after {
+    mask:url("/assets/icons/caret-up.svg") no-repeat;
+    -webkit-mask:url("/assets/icons/caret-up.svg") no-repeat;
+}

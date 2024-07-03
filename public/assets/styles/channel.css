@@ -1,0 +1,369 @@
+@import "./icon.css";
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+#app {
+    display: none;
+    height: 100%;
+}
+
+.sidebar {
+    width: 220px;
+    color: #fff;
+    background-color: #333;
+}
+
+.profile {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 34px;
+    height: 131px;
+}
+
+.profile .icon-settings {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 19px 12px;
+}
+
+.profile .icon-settings::before {
+    width: 14px;
+    height: 14px;
+}
+
+.avatar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    border: 2px solid #42b992;
+    /* border: 2px solid #bf5155; */
+    /* border: 2px solid #454545; */
+    border-radius: 50%;
+    width: 54px;
+    height: 54px;
+    background-color: #e69710;
+    cursor: pointer;
+}
+
+.avatar::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: "";
+    display: inline-block;
+    border: 1px solid #333;
+    border-radius: 50%;
+    width: 14px;
+    height: 14px;
+    background-color: #42b992;
+    /* background-color: #bf5155; */
+    /* background-color: #454545; */
+}
+
+.avatar:hover {
+    border: 2px solid #e69710;
+}
+
+.avatar span {
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.disconnect {
+    display: none;
+}
+
+.disconnect p {
+    margin: 0 12px;
+    font-size: 12px;
+}
+
+.forget-me {
+    color: #bf5155;
+    font-size: 12px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.connexion {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    padding-left: 10px;
+    border-left: 3px solid #e69710;
+    width: 100%;
+    height: 45px;
+    background-color: #454545;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.connexion.icon::before {
+    width: 14px;
+    height: 14px;
+    background-color: #fff;
+}
+
+.connexion:hover {
+    text-decoration: underline;
+}
+
+.dropdown {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown .title {
+    display: flex;
+    column-gap: 5px;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 2;
+    padding-left: 3px;
+    height: 35px;
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.dropdown .title.icon {
+    justify-content: flex-start;
+}
+
+.dropdown .title.icon::before {
+    width: 11px;
+    height: 11px;
+    background-color: #fff;
+}
+
+.dropdown .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+}
+
+.dropdown .icon::before {
+    width: 12px;
+    height: 12px;
+}
+
+#channelForm {
+    display: block;
+    align-items: center;
+    border-right: 1px solid #333;
+    width: 100%;
+    height: 46px;
+}
+
+#channelForm #channelInput {
+    padding: 15px;
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+}
+
+#channelsList, #messagesList {
+    display: block;
+}
+
+#channelsList .channelItem, #messagesList .messagesItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 15px;
+    border-left: 3px solid transparent;
+    height: 30px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+#channelsList .channelItem .icon-xmark, #messagesList .messagesItem .xmark {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 100%;
+}
+
+#channelsList .channelItem .icon-xmark:hover, #messagesList .messagesItem .xmark:hover {
+    background-color: #bf5155;
+}
+
+#channelsList .channelItem .icon-xmark::after, #messagesList .messagesItem .xmark::after {
+    width: 14px;
+    height: 14px;
+}
+
+#channelsList .channelItem.active, #messagesList .messagesItem.active {
+    border-left: 3px solid #e69710;
+    background-color: #454545;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr 249px;
+    grid-template-rows: 44px 1fr 39px;
+    border-top: 4px solid #e69710;
+    width: calc(100% - 220px);
+    height: 100%;
+}
+
+.main-container header {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    border-bottom: 1px solid #ccc;
+    height: 44px;
+}
+
+.main-container header .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 43px;
+    height: 43px;
+}
+
+.main-container header .icon::before {
+    width: 15px;
+    height: 15px;
+    background-color: #333;
+}
+
+.main-container header .icon-info::before {
+    width: 5px;
+}
+
+.main-container header .icon:hover::before {
+    background-color: #fff;
+}
+
+.main-container header .icon:hover {
+    background-color: #e69710;
+}
+
+.main-container header #channelName {
+    flex-grow: 2;
+    font-size: 20px;
+}
+
+#messages, #channels {
+    display: none;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    padding: 15px;
+}
+
+#usersList {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    border-left: 1px solid #ccc;
+}
+
+#usersList header {
+    border-bottom: 1px solid #ccc;
+    height: 41px;
+}
+
+#usersList header .people-here {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.main-container footer {
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    border-top: 1px solid #ccc;
+    height: 39px;
+}
+
+#user {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    display: flex;
+    align-items: center;
+    padding-right: 28px;
+    height: 100%;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+#user::before {
+    content: "";
+    display: inline-block;
+    margin-right: 10px;
+    border-radius: 50%;
+    width: 7px;
+    height: 7px;
+    background-color: #42b992;
+    /* background-color: #bf5155; */
+    /* background-color: #454545; */
+}
+
+#user::after {
+    content: "";
+    display: inline-block;
+    margin-left: 10px;
+    width: 9px;
+    height: 9px;
+    mask-size: 100%;
+    -webkit-mask-size: 100%;
+    background-color: #333;
+}
+
+#messageForm {
+    padding-top: 7px;
+    width: 100%;
+    height: 100%;
+}
+
+#messageInput {
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+#messageInput::placeholder {
+    color: #333;
+    font-size: 14px;
+}
+
+#messageInput:focus::placeholder {
+    color: transparent;
+}

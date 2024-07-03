@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bienvenue sur notre IRC</title>
+        <link rel="stylesheet" href="/assets/styles/login.css" />
+    </head>
+
+    <body>
+        <main>
+            <div class="container">
+                <header id="welcome">
+                    <h1>Welcome to FMT IRC!</h1>
+                </header>
+        
+                <form id="loginForm" method="post">
+                    <div class="formData nickname">
+                        <label for="nickname">Nick</label>
+                        <input id="nickname" name="nickname" type="text" value="test" required />
+                    </div>
+        
+                    <div class="formData channel">
+                        <label for="channel">Channel</label>
+                        <input id="channel" name="channel" type="text" value="#myirc" required />
+                    </div>
+        
+                    <input id="submit" name="submit" type="submit" value="start" />
+                </form>
+            </div>
+        </main>
+
+        <script type="module" src="/assets/scripts/login.js"></script>
+    </body>
+</html>
